@@ -31,14 +31,7 @@ ln -sfT ~/.termux .config/termux
 ln -sfT ~/.zprofile .config/termux/profile
 ```
 
-Also add these lines to the end of `~/.config/shell/profile`:
-
-```fish
-# Load Termux profile if in Termux
-[ -n "$TERMUX_VERSION" ] && source "$XDG_CONFIG_HOME/termux/profile"
-```
-
-And these at the end of `~/.config/zsh/.zshrc`:
+Also add these lines to the end of `~/.config/zsh/.zshrc`:
 
 ```fish
 # Load Termux zshrc, will actually load the syntax highlighting.
