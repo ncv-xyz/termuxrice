@@ -1,0 +1,11 @@
+--- a/bin/mw
++++ b/bin/mw
+@@ -50,7 +50,8 @@
+ 	"/etc/pki/tls/certs/ca-bundle.crt" "/etc/ssl/cert.pem" \
+ 	"/etc/ssl/ca-bundle.pem" "/etc/pki/tls/cacert.pem" \
+ 	"/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem" \
+-	"/usr/local/share/ca-certificates/"; do
++	"/data/data/com.termux/files/usr/share/ca-certificates/" \
++	"/data/data/com.termux/files/usr/etc/tls/cert.pem"; do
+ 	[ -f "$x" ] && sslcert="$x" && break
+ done || { echo "CA Certificate not found. Please install one or link it to /etc/ssl/certs/ca-certificates.crt" && exit 1; }
